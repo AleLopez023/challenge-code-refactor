@@ -1,13 +1,36 @@
+/* Universal Selector. Affects all items */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* Changes background color of the body element */
 body {
     background-color: #d9dcd6;
 }
 
+/* Describes links. In this case, the link is white with no text
+decoration */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Defines the h3 attributes. Was originally marked under the benefits classes,
+but seeing as they are the only h3s, you can broadly define them */
+h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Defines the font size for all paragraph elements */
+p {
+    font-size: 16px;
+}
+
+/* This defines the font, color, padding and background color of the
+entire header */
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -15,16 +38,22 @@ body {
     color: #ffffff;
 }
 
+/* Makes the h1 of the header have a font-size of 48px as well as makes it
+inline-block which menas it automatically wraps text and allows height and 
+width adjustment */
 .header h1 {
     display: inline-block;
     font-size: 48px;
 }
 
+/* Changes the color of the 'seo' in the logo */
 .header h1 .seo {
     color: #d9dcd6;
 }
 
-.header div {
+/* Using the more specified div that was changed to an ID of nav,
+changes the attributes of the nav bar */
+#nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -32,24 +61,19 @@ body {
     font-size: 20px;
 }
 
+/* Removes bullet points that would ordinarilly appear on unordered
+lists */
 .header div ul {
     list-style-type: none;
 }
 
+/* Specifies the positioning of the nav bar */
 .header div ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-p {
-    font-size: 16px;
-}
-
+/* Sets the attributes for the large header picture under nav bar */
 .hero {
     height: 800px;
     width: 100%;
@@ -59,22 +83,51 @@ p {
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
+/* Determines behavior of section labeled content such as the width 
+and the display */
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
+/* Class that pushes content left and adds margin space to the right*/
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+/* Class that pushes content to the right and adds margin space to 
+the left */
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+/*Sets the font, background, color and behavior of the boxes for
+this element */
+#services {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+/* Sets the font size and position of these specific h2s */
+#services h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+
+/* Sets the max height for all classes labeled services image */
+#services-image {
+    max-height: 200px;
+}
+
+/* Class shown on the right sidebar of site. These set the font, size,
+positioning and color according to the box model */
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -86,108 +139,24 @@ p {
     background-color: #2589bd;
 }
 
-.benefit-lead {
+/* Defines the margin and color of the benefit classes. Since they
+are getting the same attributes, they can be defined together */
+.benefit-lead, .benefit-brand, .benefit-cost {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
 
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+/* Sets attributes for the benefit imgs. Since they all have the same 
+attributes, they can be brought together with a class */
+.benefit-image {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
+/* This class determines the footer. In this case, it sets the font, 
+the alignment and the space around the footer. Also makes it clear. */
 .footer {
     padding: 30px;
     clear: both;
@@ -195,6 +164,8 @@ p {
     text-align: center;
 }
 
+/* Child of footer class, sets the font size for the h2 */
 .footer h2 {
     font-size: 20px;
 }
+
